@@ -11,10 +11,11 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
 }
 
 /* Nav Style */
-nav {
+#navbar {
     width: 100vw;
     height: 80px;
     display: flex;
@@ -69,6 +70,12 @@ nav {
     padding: 5px 15px 5px 15px;
     border-radius: 20px;
 }
+
+.humberger {
+    color: #FFf;
+    font-size: 24px;
+    display: none;
+}
 /* Nav Style */
 
 .continer {
@@ -91,9 +98,7 @@ nav {
     background-attachment: fixed;
 }
 
-.content-hero {
-    overflow: hidden;
-}
+
 
 .content-hero h1 {
     width: 500px;
@@ -109,6 +114,7 @@ nav {
     color: #fff;   
 }
 
+/* About Style */
 #about {
     width: 100%;
     height: 60vh;
@@ -154,15 +160,16 @@ nav {
     text-align: justify;
 }
 
+/* VISI MISI STYLE */
 #visi-misi {
     width: 100%;
     height: 80vh;
     background-color: var(--continer-color);
     display: flex;
     justify-content: center;
+    display: none;
 }
 
-/* VISI MISI STYLE */
 .continer-vm{
     width: 80%;
     height: 80vh;
@@ -232,6 +239,107 @@ nav {
     background-color: tomato;
     display: flex;
     justify-content: center;
+}
+
+/* responsive Design */
+@media only screen and (max-width : 903px) {
+    .about-desk {
+        width: 300px;
+    }
+
+    .about-desk h1 {
+        font-size: 38px;
+    }
+
+    .about-desk p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width : 859px) {
+    .navbar ul {
+        display: none;
+    }
+
+    .humberger {
+        display: inline-block;
+    }
+    
+    .content-hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-hero h1 {
+        font-size: 35px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .content-hero p {
+        width: 350px;
+    }
+
+    .content-about img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .content-hero h1 {
+        font-size: 25px;
+    }
+
+    .content-hero p {
+        font-size: 13px;
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width : 630px) {
+    .content-about img {
+        display: none;
+    }
+
+    .about-desk {
+        width: 350px;
+    }
+
+    .about-desk h1 {
+        font-size: 40px;
+    }
+    
+    .about-desk p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width : 424px) {
+    .about-desk {
+        width: 250px;
+    }
+
+    .about-desk h1 {
+        font-size: 35px;
+    }
+
+    .about-desk p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width : 281px) {
+    .brand img {
+        display: none;
+    }
+
+    .brand h3 {
+        font-size: 16px;
+    }
+    
 }
 
 

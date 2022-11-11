@@ -13,6 +13,7 @@ function scrollFunction() {
         document.getElementById('list-visi-misi').style.color = 'black';
         document.getElementById('list-anggota').style.color = 'black';
         document.getElementById('list-contact').style.color = 'black';
+        document.querySelector('.humberger').style.color = 'black';
     } else {
         document.getElementById('navbar').style.backgroundColor = 'transparent';
         document.getElementById('navbar').style.boxShadow = 'none';
@@ -22,5 +23,6 @@ function scrollFunction() {
         document.getElementById('list-visi-misi').style.color = 'white';
         document.getElementById('list-anggota').style.color = 'white';
         document.getElementById('list-contact').style.color = 'white';
+        document.querySelector('.humberger').style.color = 'white';
     }
 }
