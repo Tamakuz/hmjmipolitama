@@ -77,7 +77,7 @@ circle:nth-of-type(4) {
 
 .brand h3 {
     cursor: pointer;
-    color: #fefefe;
+    color: var(--continer_color);
 }
 
 .navbar ul {
@@ -136,7 +136,7 @@ circle:nth-of-type(4) {
     line-height: 0.9px;
     font-size: 1.9rem;
     text-align: center;
-    color: rgb(230, 161, 161);
+    color: var(--continer_color);
 }
 
 .content-hero h1 {
@@ -174,7 +174,7 @@ circle:nth-of-type(4) {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -40px;
     top: 0;
     margin: auto;
     z-index: 0;
@@ -639,7 +639,7 @@ circle:nth-of-type(4) {
         line-height: 0.9px;
         font-size: 1.5rem;
         text-align: center;
-        color: rgb(230, 161, 161);
+        color: var(--continer_color);
     }
 
     .content-hero h1 {
@@ -679,7 +679,7 @@ circle:nth-of-type(4) {
         line-height: 0.9px;
         font-size: 1rem;
         text-align: center;
-        color: rgb(230, 161, 161);
+        color: var(--continer_color);
     }
 
     .content-hero h1 {
@@ -713,10 +713,6 @@ circle:nth-of-type(4) {
         display: none;
     }
 
-    .about-desk {
-        /* width: 350px; */
-    }
-
     .about-desk h1 {
         font-size: 40px;
     }
@@ -739,6 +735,10 @@ circle:nth-of-type(4) {
         padding-top: 120px;
     }
 
+    .vm-content p {
+        padding: 10px;
+    }
+
     .content-about h1 {
         font-size: 2.3rem;
         text-align: center;
@@ -757,6 +757,28 @@ circle:nth-of-type(4) {
 * * CHAPTER VISI MISI
 * * CHAPTER ABOUT
 */
+
+/* CHAPTER HERO */
+@media only screen and (max-width : 370px) {
+    .content-hero h1 {
+        font-size: 30px;
+    }
+
+    .content-hero p {
+        font-size: 8px;
+    }
+}
+/* CHAPTER HERO */
+
+/* CHAPTER VISI MISI */
+@media only screen and (max-width : 340px) {
+    #visi-misi {
+        margin-top: 100px;
+    }
+}
+/* CHAPTER VISI MISI */
+
+
 
 /* RESPONSIVE
 * * CHAPTER VISI MISI
