@@ -2,7 +2,7 @@ window.onscroll = function() {scrollFunction()}
 
 function scrollFunction() {
     if (document.body.scrollTop || document.documentElement.scrollTop > 130){
-        document.getElementById('navbar').style.backgroundColor = 'rgb(231, 231, 231)';
+        document.getElementById('navbar').style.backgroundColor = '#fff';
         document.getElementById('navbar').style.height = "60px";
         document.getElementById('navbar').style.boxShadow = '0px 1px 3px 0px rgba(0,0,0,0.75)';
         document.getElementById('navbar').style.transition = 'ease-in-out';
