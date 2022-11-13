@@ -1,5 +1,5 @@
 :root {
-    --continer_color : rgb(227, 227, 227);
+    --continer_color : rgb(231, 231, 231);
     --primary-color : rgb(39, 44, 125);
 }
 
@@ -47,7 +47,7 @@ html {
 
 .brand h3 {
     cursor: pointer;
-    color: #FFf;
+    color: #fefefe;
 }
 
 .navbar ul{
@@ -61,7 +61,7 @@ html {
 
 .navbar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--continer_color);
 }
 
 #list-home {
@@ -90,6 +90,7 @@ html {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(assets/img/hacker.jpg);
@@ -114,11 +115,18 @@ html {
     color: #fff;   
 }
 
+.wave {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: -20px;
+}
+
 /* About Style */
 #about {
     width: 100%;
     height: 60vh;
-    background-color: var(--continer-color);
+    background-color: var(--continer_color);
     display: flex;
     justify-content: center;
 }
@@ -274,7 +282,7 @@ html {
         height: auto;
         padding: 20px 65px 20px 0;
         border-radius: 10px 0 0 10px;
-        background-color: #fefefe;
+        background-color: var(--continer_color);
         text-align: center;
         transition: .5s ease-in-out;
     }
