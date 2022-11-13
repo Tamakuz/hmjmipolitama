@@ -1,6 +1,11 @@
+/* GENERAL */
 :root {
     --continer_color: #fff;
     --primary-color: rgb(39, 44, 125);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 *,
@@ -9,13 +14,37 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+/* GENERAL */
 
-html {
-    scroll-behavior: smooth;
-    width: 100%;
+/* PRELOADER */
+#clackers {
+    /*   border: 1px solid white; */
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* Nav Style */
+circle:nth-of-type(1) {
+    fill: #ffffff;
+}
+
+circle:nth-of-type(2) {
+    fill: #fcd837;
+}
+
+circle:nth-of-type(3) {
+    fill: #f9a11f;
+}
+
+circle:nth-of-type(4) {
+    fill: #f27c21;
+}
+
+/* PRELOADER */
+
+/* NAVBAR */
 #navbar {
     width: 100vw;
     height: 80px;
@@ -65,21 +94,22 @@ html {
     color: var(--continer_color);
 }
 
-#list-home {
+.styleLink {
     background-color: var(--primary-color);
+    color: #fff;
     padding: 5px 15px 5px 15px;
     border-radius: 20px;
 }
 
 .humberger {
-    color: #FFf;
+    color: #fff;
     font-size: 24px;
     display: none;
     cursor: pointer;
 }
+/* NAVBAR */
 
-/* Nav Style */
-
+/* HERO SECTION */
 .continer {
     width: 80%;
     height: 100vh;
@@ -102,21 +132,28 @@ html {
     background-attachment: fixed;
 }
 
-
+.content-hero h3 {
+    line-height: 0.9px;
+    font-size: 1.9rem;
+    text-align: center;
+    color: rgb(230, 161, 161);
+}
 
 .content-hero h1 {
-    width: 500px;
-    font-size: 45px;
+    font-size: 5rem;
     text-align: center;
     color: #fff;
 }
 
 .content-hero p {
-    width: 500px;
-    font-size: 16px;
+    line-height: 0.9px;
+    font-size: 1rem;
     text-align: center;
     color: #fff;
 }
+/* HERO SECTION */
+
+/* WAVE */
 
 @keyframes move_wave {
     0% {
@@ -140,6 +177,7 @@ html {
     bottom: 0;
     top: 0;
     margin: auto;
+    z-index: 0;
 }
 
 .waveWrapperInner {
@@ -200,11 +238,12 @@ html {
 .waveAnimation .waveBottom {
     animation: move_wave 15s linear infinite;
 }
+/* WAVE */
 
-/* About Style */
+/* ABOUT */
 #about {
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     background-color: var(--continer_color);
     display: flex;
     justify-content: center;
@@ -212,7 +251,7 @@ html {
 
 .continer-about {
     width: 80%;
-    height: 60vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,41 +259,187 @@ html {
 
 .content-about {
     display: flex;
+    justify-content: space-between;
+    width: 100vw;
 }
 
-.content-about img {
-    width: 320px;
-    height: 320px;
-    padding: 20px;
-    border-radius: 50%;
+.content-about h1 {
+    font-size: 2.3rem;
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+
+.about-desk .image {
+    margin: 30px 0 30px 0;
+    border-radius: 5px;
+    width: 250px;
+    height: 250px;
+    transition: all .4s;
+}
+
+.about-desk img {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.about-desk .image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 9px rgb(59, 59, 59);
 }
 
 .about-desk {
-    width: 500px;
-    padding: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-
-.about-desk h1 {
-    font-size: 48px;
 }
 
 .about-desk p {
-    font-size: 18px;
+    padding: 30px 0 0 40px;
+    font-size: 1.2rem;
     text-align: justify;
+    font-weight: 100;
+}
+/* ABOUT */
+
+/* VISI MISI */
+#visi-misi {
+    margin-top: 50px;
+    width: 100%;
+    height: 80vh;
+    background-color: var(--continer-color);
+    display: flex;
+    justify-content: center;
+    display: none;
 }
 
-/* VISI MISI STYLE */
+.continer-vm {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.head-vm {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.head-vm h2 {
+    font-size: 32px;
+    /* margin-bottom: 5px; */
+}
+
+.head-vm p {
+    font-size: 16px;
+}
+
+.card-vm {
+    display: flex;
+    justify-content: space-around;
+}
+
+.vm-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--continer-color);
+    width: 45%;
+    height: 350px;
+    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75);
+}
+
+.icon-vm-continer {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vm-icon {
+    font-size: 35px;
+    color: #fff;
+}
+
+.vm-content {
+    padding: 25px;
+}
+
+.continer-vm {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.head-vm {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.head-vm h2 {
+    font-size: 32px;
+    /* margin-bottom: 5px; */
+}
+
+.head-vm p {
+    font-size: 16px;
+}
+
+.card-vm {
+    display: flex;
+    justify-content: space-around;
+}
+
+.vm-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--continer-color);
+    width: 45%;
+    height: 350px;
+    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75);
+}
+
+.icon-vm-continer {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vm-icon {
+    font-size: 35px;
+    color: #fff;
+}
+
+.vm-content {
+    padding: 25px;
+}
+
 #visi-misi {
     width: 100%;
     height: 80vh;
     background-color: var(--continer-color);
     display: flex;
     justify-content: center;
-    display: none;
 }
 
 .continer-vm {
@@ -317,236 +502,97 @@ html {
 .vm-content {
     padding: 25px;
 }
+/* VISI MISI */
 
-/* VISI MISI STYLE */
-.continer-vm {
-    width: 80%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* RESPONSIVE CHAPTER CARD */
+@media only screen and (max-width : 1200px) {
+    .card-vm .vm-card {
+        margin: 0 17px;
+        width: 90%;
+        height: 100%;
+    }
+
+    .card-vm .vm-card .icon-vm-continer {
+        margin-top: 18px;
+    }
 }
+/* RESPONSIVE CHAPTER CARD */
 
-.head-vm {
-    width: 100%;
-    height: 80px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.head-vm h2 {
-    font-size: 32px;
-    /* margin-bottom: 5px; */
-}
-
-.head-vm p {
-    font-size: 16px;
-}
-
-.card-vm {
-    display: flex;
-    justify-content: space-around;
-}
-
-.vm-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 5px;
-    background-color: var(--continer-color);
-    width: 45%;
-    height: 350px;
-    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75);
-}
-
-.icon-vm-continer {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.vm-icon {
-    font-size: 35px;
-    color: #fff;
-}
-
-.vm-content {
-    padding: 25px;
-}
-
-#visi-misi {
-    width: 100%;
-    height: 80vh;
-    background-color: var(--continer-color);
-    display: flex;
-    justify-content: center;
-}
-
-/* VISI MISI STYLE */
-.continer-vm {
-    width: 80%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.head-vm {
-    width: 100%;
-    height: 80px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.head-vm h2 {
-    font-size: 32px;
-    /* margin-bottom: 5px; */
-}
-
-.head-vm p {
-    font-size: 16px;
-}
-
-.card-vm {
-    display: flex;
-    justify-content: space-around;
-}
-
-.vm-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 5px;
-    background-color: var(--continer-color);
-    width: 45%;
-    height: 350px;
-    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75);
-}
-
-.icon-vm-continer {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.vm-icon {
-    font-size: 35px;
-    color: #fff;
-}
-
-.vm-content {
-    padding: 25px;
-}
-
-/* VISI MISI STYLE */
-
-/*  Anggota Style */
-#anggota {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-
-.continer-agt {
-    width: 80%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.head-agt {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.agt-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: auto;
-}
-
-.card-agt {
-    width: 30%;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: url(/assets/img/man.jpg);
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75);
-    border-radius: 5px;
-}
-
-.porfil-agt {
-    width: 80px;
-    height: 80px;
-    background: url(/assets/img/man.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    display: none;
-}
-
-.agt-card-content {
-    text-align: center;
-    color: #fff;
-    display: none;
-}
-
-.card-agt:hover {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/assets/img/man.jpg);
-    background-size: cover;
-    background-position: center;
-
-}
-
-.card-agt:hover .porfil-agt {
-    display: inline-block;
-}
-
-.card-agt:hover .agt-card-content {
-    display: inline-block;
-}
-
-/* responsive Design */
-@media only screen and (max-width : 903px) {
+/* RESPONSIVE
+* * CHAPTER WAVE
+* * CHAPTER VISI MISI
+* * CHAPTER ABOUT
+*/
+@media only screen and (max-width : 921px) {
     .waveWrapper {
         bottom: -20px;
     }
 
-    .about-desk {
-        width: 300px;
+    .card-vm {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .about-desk h1 {
-        font-size: 38px;
+    .card-vm .vm-card {
+        padding: 7px;
+        margin-top: 25px;
+        width: 90%;
+        height: 100%;
     }
+
+    .card-vm .vm-card .icon-vm-continer {
+        margin-top: 20px;
+    }
+
+    .about-desk {
+        align-items: center;
+    }
+
+    .about-desk .image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-desk .image {
+        display: none;
+    }
+
+    .content-about h1 {
+        font-size: 2.3rem;
+        text-align: center;
+        padding: 0;
+    }
+
+    .about-desk {
+        flex-direction: column;
+    }
+
 
     .about-desk p {
-        font-size: 12px;
+        padding: 0;
+        font-size: 1.2rem;
+        text-align: justify;
+        font-weight: 100;
+        font-size: .9rem;
     }
-}
 
+}
+/* RESPONSIVE
+* * CHAPTER WAVE
+* * CHAPTER VISI MISI
+* * CHAPTER ABOUT
+*/
+
+/* RESPONSIVE
+* * CHAPTER VISI MISI
+* * CHAPTER NAVBAR
+* * CHAPTER HERO SECTION
+*/
 @media only screen and (max-width : 859px) {
+    .continer-vm {
+        margin-top: 80px;
+    }
+
     .navbar ul {
         display: none;
     }
@@ -589,14 +635,24 @@ html {
         align-items: center;
     }
 
-    .content-hero h1 {
-        font-size: 35px;
-        width: 300px;
+    .content-hero h3 {
+        line-height: 0.9px;
+        font-size: 1.5rem;
         text-align: center;
+        color: rgb(230, 161, 161);
+    }
+
+    .content-hero h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        color: #fff;
     }
 
     .content-hero p {
-        width: 350px;
+        line-height: 0.9px;
+        font-size: .8rem;
+        text-align: center;
+        color: #fff;
     }
 
     .content-about img {
@@ -604,25 +660,61 @@ html {
         height: 200px;
     }
 }
+/* RESPONSIVE
+* * CHAPTER VISI MISI
+* * CHAPTER NAVBAR
+* * CHAPTER HERO SECTION
+*/
 
-@media only screen and (max-width: 440px) {
+/* RESPONSIVE
+* * CHAPTER VISI MISI
+* * CHAPTER HERO SECTION
+*/
+@media only screen and (max-width: 460px) {
+    .continer-vm {
+        padding-top: 100px;
+    }
+
+    .content-hero h3 {
+        line-height: 0.9px;
+        font-size: 1rem;
+        text-align: center;
+        color: rgb(230, 161, 161);
+    }
+
     .content-hero h1 {
-        font-size: 25px;
+        font-size: 2.8rem;
+        text-align: center;
+        color: #fff;
     }
 
     .content-hero p {
-        font-size: 13px;
-        width: 250px;
+        line-height: 0.9px;
+        font-size: .6rem;
+        text-align: center;
+        color: #fff;
     }
 }
+/* RESPONSIVE
+* * CHAPTER VISI MISI
+* * CHAPTER HERO SECTION
+*/
 
+/* RESPONSIVE
+* * CHAPTER VISI MISI
+* * CHAPTER ABOUT
+*/
 @media only screen and (max-width : 630px) {
+    .continer-vm {
+        padding-top: 100px;
+    }
+
     .content-about img {
         display: none;
     }
 
     .about-desk {
-        width: 350px;
+        /* width: 350px; */
     }
 
     .about-desk h1 {
@@ -633,22 +725,48 @@ html {
         font-size: 16px;
     }
 }
+/* RESPONSIVE
+* * CHAPTER VISI MISI
+* * CHAPTER ABOUT
+*/
 
+/* RESPONSIVE
+* * CHAPTER VISI MISI
+* * CHAPTER ABOUT
+*/
 @media only screen and (max-width : 424px) {
-    .about-desk {
-        width: 250px;
+    .continer-vm {
+        padding-top: 120px;
     }
 
-    .about-desk h1 {
-        font-size: 35px;
+    .content-about h1 {
+        font-size: 2.3rem;
+        text-align: center;
+        padding: 7px 0 0 0;
     }
 
     .about-desk p {
-        font-size: 14px;
+        padding: 10px 0 0 0;
+        font-size: 1.2rem;
+        text-align: justify;
+        font-weight: 100;
+        font-size: .9rem;
     }
 }
+/* RESPONSIVE
+* * CHAPTER VISI MISI
+* * CHAPTER ABOUT
+*/
 
+/* RESPONSIVE
+* * CHAPTER VISI MISI
+* * CHAPTER NAVBAR
+*/
 @media only screen and (max-width : 281px) {
+    .continer-vm {
+        padding-top: 200px;
+    }
+
     .brand img {
         display: none;
     }
@@ -656,5 +774,8 @@ html {
     .brand h3 {
         font-size: 16px;
     }
-
 }
+/* RESPONSIVE
+* * CHAPTER VISI MISI
+* * CHAPTER NAVBAR
+*/

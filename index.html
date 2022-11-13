@@ -22,15 +22,50 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <svg width="300" height="120" id="clackers">
+        <!-- Left arc path -->
+        <svg>
+            <path id="arc-left-up" fill="none" d="M 90 90 A 90 90 0 0 1 0 0" />
+        </svg>
+        <!-- Right arc path -->
+        <svg>
+            <path id="arc-right-up" fill="none" d="M 100 90 A 90 90 0 0 0 190 0" />
+        </svg>
+
+        <text x="150" y="50" fill="#ffffff" font-family="Helvetica Neue,Helvetica,Arial" font-size="18"
+            text-anchor="middle">
+            L O A D I N G
+        </text>
+        <circle cx="15" cy="15" r="15">
+            <!-- I used a python script to calculate the keyPoints and keyTimes based on a quadratic function. -->
+            <animateMotion dur="1.5s" repeatCount="indefinite" calcMode="linear"
+                keyPoints="0.0;0.19;0.36;0.51;0.64;0.75;0.84;0.91;0.96;0.99;1.0;0.99;0.96;0.91;0.84;0.75;0.64;0.51;0.36;0.19;0.0;0.0;0.05;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0"
+                keyTimes="0.0;0.025;0.05;0.075;0.1;0.125;0.15;0.175;0.2;0.225;0.25;0.275;0.3;0.325;0.35;0.375;0.4;0.425;0.45;0.475;0.5;0.525;0.55;0.575;0.6;0.625;0.65;0.675;0.7;0.725;0.75;0.775;0.8;0.825;0.85;0.875;0.9;0.925;0.95;0.975;1.0">
+                <mpath xlink:href="#arc-left-up" />
+            </animateMotion>
+        </circle>
+        <circle cx="135" cy="105" r="15" />
+        <circle cx="165" cy="105" r="15" />
+        <circle cx="95" cy="15" r="15">
+            <animateMotion dur="1.5s" repeatCount="indefinite" calcMode="linear"
+                keyPoints="0.0;0.0;0.05;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0.0;0.19;0.36;0.51;0.64;0.75;0.84;0.91;0.96;0.99;1.0;0.99;0.96;0.91;0.84;0.75;0.64;0.51;0.36;0.19;0.0"
+                keyTimes="0.0;0.025;0.05;0.075;0.1;0.125;0.15;0.175;0.2;0.225;0.25;0.275;0.3;0.325;0.35;0.375;0.4;0.425;0.45;0.475;0.5;0.525;0.55;0.575;0.6;0.625;0.65;0.675;0.7;0.725;0.75;0.775;0.8;0.825;0.85;0.875;0.9;0.925;0.95;0.975;1.0">
+                <mpath xlink:href="#arc-right-up" />
+            </animateMotion>
+        </circle>
+    </svg>
+    <!-- Preloader -->
+
     <!-- Navbar -->
-    <nav id="navbar">
+    <nav class="load" id="navbar">
         <div class="navbar">
             <div class="brand">
                 <img src="assets/img/hmjlogo.jpg">
                 <h3 id="title-brand">HMJ MI POLITAMA</h3>
             </div>
             <ul class="nav-menu">
-                <li><a href="#hero" id="list-home">HOME</a></li>
+                <li><a href="#hero" class="styleLink" id="list-home">HOME</a></li>
                 <li><a href="#about" id="list-about">ABOUT</a></li>
                 <li><a href="#visi-misi" id="list-visi-misi">VISI MISI</a></li>
                 <li><a href="" id="list-anggota">DOCS</a></li>
@@ -44,19 +79,16 @@
     <!-- Nav Bar -->
 
     <!-- Hero Section -->
-    <section id="hero">
+    <section class="load" id="hero">
         <div class="continer">
             <div class="content-hero">
-                <h1 data-aos="fade-down">Official HMJ MI POLITAMA</h1>
-                <p data-aos="fade-down">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci fuga illo cum
-                    voluptate incidunt ea rem alias quos nisi modi!</p>
+                <h3>Official HMJ</h3>
+                <h1 data-aos="fade-down">MI POLITAMA</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing</p>
             </div>
         </div>
     </section>
-    <div class="waveWrapper waveAnimation">
-        <div class="waveWrapperInner bgTop">
-            <div class="wave waveTop" style="background-image: url('assets/img/wave-top.png')"></div>
-        </div>
+    <div class="load waveWrapper waveAnimation">
         <div class="waveWrapperInner bgMiddle">
             <div class="wave waveMiddle" style="background-image: url('assets/img/wave-mid.png')"></div>
         </div>
@@ -67,24 +99,27 @@
     <!-- Hero Section -->
 
     <!-- About Section -->
-    <section id="about">
+    <section class="load" id="about">
         <div class="continer-about">
             <div class="content-about">
-                <img src="assets/img/hmjlogo.jpg" alt="" data-aos="fade-right">
-                <div class="about-desk" data-aos="fade-left">
-                    <h1>About</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem totam est quis minima ipsum,
-                        expedita sit eaque magni odio maiores repellendus quisquam iste eveniet eos enim earum libero
-                        itaque numquam ut, voluptatem neque minus quaerat! Placeat doloremque ratione facilis ut quo
-                        numquam unde blanditiis, ex laborum architecto, explicabo, consequatur incidunt.</p>
-                </div>
+                <h1>About</1>
+                    <div class="about-desk" data-aos="fade-left">
+                        <div class="image">
+                            <img src="assets/img/hmjlogo.jpg" alt="" data-aos="fade-right">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem totam est quis minima ipsum,
+                            expedita sit eaque magni odio maiores repellendus quisquam iste eveniet eos enim earum
+                            libero
+                            itaque numquam ut, voluptatem neque minus quaerat! Placeat doloremque ratione facilis ut quo
+                            numquam unde blanditiis, ex laborum architecto, explicabo, consequatur incidunt.</p>
+                    </div>
             </div>
         </div>
     </section>
     <!-- About Sectiom -->
 
     <!-- Visi Misi -->
-    <section id="visi-misi">
+    <section class="load" id="visi-misi">
         <div class="continer-vm">
             <div data-aos="fade-up" class="head-vm">
                 <h2>HMJ MI POLITAMA</h2>
@@ -118,48 +153,16 @@
     </section>
     <!-- Visi Misi -->
 
-    <!-- Anggota -->
-    <section id="anggota">
-        <div class="continer-agt">
-            <div class="head-agt">
-                <h1>ANGGOTA HMJ MI</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, rem!</p>
-            </div>
-            <div class="agt-card">
-                <div class="card-agt">
-                    <span class="porfil-agt"></span>
-                    <div class="agt-card-content">
-                        <h3>TITLE</h3>
-                        <p>BIODATA</p>
-                    </div>
-                </div>
-                <div class="card-agt">
-                    <span class="porfil-agt"></span>
-                    <div class="agt-card-content">
-                        <h3>TITLE</h3>
-                        <p>BIODATA</p>
-                    </div>
-                </div>
-                <div class="card-agt">
-                    <span class="porfil-agt"></span>
-                    <div class="agt-card-content">
-                        <h3>TITLE</h3>
-                        <p>BIODATA</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Script AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({ once: true });
     </script>
     <!-- Script AOS -->
     <!-- Sript JS -->
     <script src="js/navbar.js"></script>
     <script src="js/navToggle.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
