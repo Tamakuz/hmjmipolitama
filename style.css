@@ -1,9 +1,10 @@
 :root {
-    --continer_color : rgb(231, 231, 231);
-    --primary-color : rgb(39, 44, 125);
+    --continer_color: #fff;
+    --primary-color: rgb(39, 44, 125);
 }
 
-*,body {
+*,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -50,7 +51,7 @@ html {
     color: #fefefe;
 }
 
-.navbar ul{
+.navbar ul {
     display: flex;
 }
 
@@ -76,6 +77,7 @@ html {
     display: none;
     cursor: pointer;
 }
+
 /* Nav Style */
 
 .continer {
@@ -93,7 +95,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(assets/img/hacker.jpg);
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(assets/img/hacker.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -112,14 +114,90 @@ html {
     width: 500px;
     font-size: 16px;
     text-align: center;
-    color: #fff;   
+    color: #fff;
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+}
+
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+
+.bgBottom {
+    z-index: 5;
 }
 
 .wave {
-    width: 100%;
-    height: auto;
     position: absolute;
-    bottom: -20px;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+
+.waveTop {
+    background-size: 50% 100px;
+}
+
+.waveAnimation .waveTop {
+    animation: move-wave 3s;
+    -webkit-animation: move-wave 3s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.waveMiddle {
+    background-size: 50% 120px;
+}
+
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+
+.waveBottom {
+    background-size: 50% 100px;
+}
+
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
 }
 
 /* About Style */
@@ -143,7 +221,7 @@ html {
     display: flex;
 }
 
-.content-about img{
+.content-about img {
     width: 320px;
     height: 320px;
     padding: 20px;
@@ -178,7 +256,7 @@ html {
     display: none;
 }
 
-.continer-vm{
+.continer-vm {
     width: 80%;
     height: 80vh;
     display: flex;
@@ -217,7 +295,7 @@ html {
     background-color: var(--continer-color);
     width: 45%;
     height: 350px;
-    box-shadow: 0 0 5px -2px rgba(0,0,0,0.75);
+    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75);
 }
 
 .icon-vm-continer {
@@ -238,19 +316,222 @@ html {
 .vm-content {
     padding: 25px;
 }
+
+/* VISI MISI STYLE */
+.continer-vm {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.head-vm {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.head-vm h2 {
+    font-size: 32px;
+    /* margin-bottom: 5px; */
+}
+
+.head-vm p {
+    font-size: 16px;
+}
+
+.card-vm {
+    display: flex;
+    justify-content: space-around;
+}
+
+.vm-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--continer-color);
+    width: 45%;
+    height: 350px;
+    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75);
+}
+
+.icon-vm-continer {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vm-icon {
+    font-size: 35px;
+    color: #fff;
+}
+
+.vm-content {
+    padding: 25px;
+}
+
+#visi-misi {
+    width: 100%;
+    height: 80vh;
+    background-color: var(--continer-color);
+    display: flex;
+    justify-content: center;
+}
+
+/* VISI MISI STYLE */
+.continer-vm {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.head-vm {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.head-vm h2 {
+    font-size: 32px;
+    /* margin-bottom: 5px; */
+}
+
+.head-vm p {
+    font-size: 16px;
+}
+
+.card-vm {
+    display: flex;
+    justify-content: space-around;
+}
+
+.vm-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--continer-color);
+    width: 45%;
+    height: 350px;
+    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75);
+}
+
+.icon-vm-continer {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vm-icon {
+    font-size: 35px;
+    color: #fff;
+}
+
+.vm-content {
+    padding: 25px;
+}
+
 /* VISI MISI STYLE */
 
 /*  Anggota Style */
 #anggota {
     width: 100%;
     height: 100vh;
-    background-color: tomato;
     display: flex;
     justify-content: center;
 }
 
+.continer-agt {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-agt {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.agt-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.card-agt {
+    width: 30%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(/assets/img/man.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+}
+
+.porfil-agt {
+    width: 80px;
+    height: 80px;
+    background: url(/assets/img/man.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: none;
+}
+
+.agt-card-content {
+    text-align: center;
+    color: #fff;
+    display: none;
+}
+
+.card-agt:hover {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/assets/img/man.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.card-agt:hover .porfil-agt {
+    display: inline-block;
+}
+
+.card-agt:hover .agt-card-content {
+    display: inline-block;
+}
+
 /* responsive Design */
 @media only screen and (max-width : 903px) {
+    .waveWrapper {
+        bottom: -20px;
+    }
+
     .about-desk {
         width: 300px;
     }
@@ -295,7 +576,7 @@ html {
     .navbar ul li {
         padding: 10px;
     }
-    
+
     .navbar ul li a {
         color: #000;
     }
@@ -346,7 +627,7 @@ html {
     .about-desk h1 {
         font-size: 40px;
     }
-    
+
     .about-desk p {
         font-size: 16px;
     }
@@ -374,9 +655,5 @@ html {
     .brand h3 {
         font-size: 16px;
     }
-    
+
 }
-
-
-
-
