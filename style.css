@@ -174,7 +174,7 @@ circle:nth-of-type(4) {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -40px;
+    bottom: 0;
     top: 0;
     margin: auto;
     z-index: 0;
@@ -188,14 +188,9 @@ circle:nth-of-type(4) {
     bottom: -1px;
 }
 
-.bgTop {
-    z-index: 15;
-    opacity: 0.5;
-}
-
 .bgMiddle {
     z-index: 10;
-    opacity: 0.75;
+    /* opacity: 0.75; */
 }
 
 .bgBottom {
