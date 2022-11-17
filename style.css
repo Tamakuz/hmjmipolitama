@@ -24,6 +24,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #000;
 }
 
 circle:nth-of-type(1) {
@@ -436,6 +437,8 @@ circle:nth-of-type(4) {
     background-color: var(--continer-color);
     display: flex;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .continer-vm {
@@ -498,7 +501,79 @@ circle:nth-of-type(4) {
 .vm-content {
     padding: 25px;
 }
+
 /* VISI MISI */
+
+/* DOCS STYLE */
+#docs {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(4,0,78,1) 0%, rgba(0,0,168,1) 100%);    
+    position: relative;
+}
+
+.continer-docs {
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+}
+
+.swiper-button-next i,.swiper-button-prev i {
+    background: #fff;
+    height: 50px;
+    width: 50px;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.continer-docs .slider {
+    font-size: 0px;
+    white-space: nowrap;
+}
+
+.slider {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.slider img{
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+    width: calc(100% / 3);
+}
+
+.slider img:first-child {
+    margin-left: 0;
+}
+
+.swiper-slide {
+    margin: 0 0 0 0;
+}
+
+.swiper-button-next {
+    right: 90px;
+}
+
+.swiper-button-prev {
+    left: 90px;
+}
+
+.swiper-pagination {
+    background-color: white;
+    border-radius: 10px;
+}
+/* DOCS STYLE */
 
 /* RESPONSIVE CHAPTER CARD */
 @media only screen and (max-width : 1200px) {
@@ -518,10 +593,20 @@ circle:nth-of-type(4) {
 * * CHAPTER WAVE
 * * CHAPTER VISI MISI
 * * CHAPTER ABOUT
+* * SLIDER
 */
 @media only screen and (max-width : 921px) {
     .waveWrapper {
         bottom: -20px;
+    }
+
+    #visi-misi {
+        height: 100%;
+    }
+
+    .continer-vm {
+        height: 100%;
+        position: relative;
     }
 
     .card-vm {
@@ -533,7 +618,7 @@ circle:nth-of-type(4) {
         padding: 7px;
         margin-top: 25px;
         width: 90%;
-        height: 100%;
+        /* height: 100%; */
     }
 
     .card-vm .vm-card .icon-vm-continer {
@@ -572,11 +657,16 @@ circle:nth-of-type(4) {
         font-size: .9rem;
     }
 
+    .slider img {
+        width: calc(100% / 2);
+    }
+
 }
 /* RESPONSIVE
 * * CHAPTER WAVE
 * * CHAPTER VISI MISI
 * * CHAPTER ABOUT
+* * SLIDER
 */
 
 /* RESPONSIVE
@@ -663,8 +753,21 @@ circle:nth-of-type(4) {
 */
 
 /* RESPONSIVE
+** CHAPTER DOCS
+ */
+@media screen and (max-width: 626px) {
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+}
+/* RESPONSIVE
+** CHAPTER DOCS
+ */
+
+/* RESPONSIVE
 * * CHAPTER VISI MISI
 * * CHAPTER HERO SECTION
+* * SLIDER
 */
 @media only screen and (max-width: 460px) {
     .continer-vm {
@@ -690,10 +793,15 @@ circle:nth-of-type(4) {
         text-align: center;
         color: #fff;
     }
+
+    .slider img {
+        width: calc(100%);
+    }
 }
 /* RESPONSIVE
 * * CHAPTER VISI MISI
 * * CHAPTER HERO SECTION
+* * SLIDER
 */
 
 /* RESPONSIVE
