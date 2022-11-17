@@ -511,7 +511,7 @@ circle:nth-of-type(4) {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(0deg, rgba(4,0,78,1) 0%, rgba(0,0,168,1) 100%);    
+    /* background: linear-gradient(0deg, rgba(4,0,78,1) 0%, rgba(0,0,168,1) 100%);     */
     position: relative;
 }
 
@@ -519,6 +519,12 @@ circle:nth-of-type(4) {
     width: 80%;
     height: auto;
     overflow: hidden;
+}
+
+.title-docs {
+    /* background-color: red; */
+    text-align: center;
+    padding-top: 50px;
 }
 
 .swiper-button-next i,.swiper-button-prev i {
@@ -557,16 +563,14 @@ circle:nth-of-type(4) {
     margin-left: 0;
 }
 
-.swiper-slide {
-    margin: 0 0 0 0;
-}
-
 .swiper-button-next {
     right: 90px;
+    top: 60%;
 }
 
 .swiper-button-prev {
     left: 90px;
+    top: 60%;
 }
 
 .swiper-pagination {

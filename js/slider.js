@@ -5,6 +5,11 @@ var swiper = new Swiper(".continer-docs", {
     spaceBetween: 25,
     loop: true,
     grabCursor : 'true',
+    centeredSlides: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
