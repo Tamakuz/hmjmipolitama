@@ -92,19 +92,19 @@ circle:nth-of-type(4) {
 
 .navbar ul li {
     list-style: none;
-    margin-left: 20px;
 }
 
 .navbar ul li a {
     text-decoration: none;
+    padding: 15px 5px;
     color: var(--continer_color);
+    padding: 7px 17px;
+    box-sizing: border-box;
 }
 
-.styleLink {
-    background-color: var(--primary-color);
+.active {
+    box-shadow: 0 4px #1a73e8;
     color: #fff;
-    padding: 5px 15px 5px 15px;
-    border-radius: 20px;
 }
 
 .humberger {
