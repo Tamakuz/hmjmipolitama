@@ -5,7 +5,7 @@ menu = document.querySelector(".navbar ul");
 humberger.onclick = function() {
     let active = menu.classList.toggle("active");
     if (active) {
-        document.getElementById('list-home').style.color = 'white';
+        document.getElementById('list-home').style.color = 'black';
         document.getElementById('list-about').style.color = 'black';
         document.getElementById('list-visi-misi').style.color = 'black';
         document.getElementById('list-anggota').style.color = 'black';
