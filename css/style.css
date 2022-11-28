@@ -130,7 +130,7 @@ circle:nth-of-type(4) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(assets/img/hacker.jpg);
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(assets/img/.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
